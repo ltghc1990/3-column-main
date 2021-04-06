@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* text for paragraphs */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* text for all caps */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+/* Mobile First */
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-width: 375px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blue;
+  margin: 12px 6px;
+}
+
+.icon {
+  width: 50px;
+}
+
+@media (min-width: 1020px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
