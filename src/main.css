@@ -11,13 +11,6 @@ body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   background-color: hsl(0, 0%, 95%);
-  height: 100vh;
-}
-
-p {
-  color: hsla(0, 0%, 100%, 0.75);
-  line-height: 28px;
-  padding-bottom: 38px;
 }
 
 .title {
@@ -26,6 +19,12 @@ p {
   font-size: 40px;
   text-transform: uppercase;
   padding-bottom: 38px;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 28px;
+  padding-bottom: 68px;
 }
 
 .bg-1 {
@@ -42,10 +41,15 @@ p {
 
 button {
   background-color: hsl(0, 0%, 95%);
-  padding: 20px;
+  padding: 16px 28px;
   border-radius: 50px;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .bg-1 button {
@@ -61,13 +65,19 @@ button {
 }
 
 /* Mobile First */
+.container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 375px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 22px;
+  box-shadow: 6px 8px 6px rgb(185, 180, 180);
+}
 
 .card {
-  display: flex;
-  flex-direction: column;
-  padding: 38px 60px;
-  max-width: 375px;
-  margin: auto;
+  padding: 42px 60px;
 }
 
 .icon {
@@ -76,8 +86,14 @@ button {
 }
 
 @media (min-width: 1020px) {
+  body {
+    height: 100vh;
+    padding-top: 120px;
+  }
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1125px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
   }
 }
